@@ -1,0 +1,17 @@
+CREATE TABLE IF NOT EXISTS users (
+    id int UNSIGNED NOT NULL AUTO_INCREMENT,
+    surname varchar(50) NOT NULL,
+    name varchar(50) NOT NULL,
+    patronymic varchar(50) DEFAULT NULL,
+    age int(3) DEFAULT NULL,
+    phoneNumber char(11) NOT NULL, 
+    email varchar(50) NOT NULL,
+    status char(10) NOT NULL,
+    updated_at TIMESTAMP,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY(id)
+);
+CREATE UNIQUE INDEX phoneNumber ON users(phoneNumber);
+CREATE INDEX age ON users(age);
+CREATE UNIQUE INDEX email ON users(email);
+CREATE INDEX surname ON users(surname);

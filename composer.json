@@ -1,0 +1,33 @@
+{
+    "name": "i-yard/sender",
+    "bin": [
+      "bin/send"
+    ],
+    "description": "SMS Sender",
+    "authors": [
+      {
+        "name": "i-yard",
+        "email": "iyardsev@gmail.com"
+      }
+    ],
+    "scripts": {
+      "phpcs": "phpcs",
+      "phpunit": "phpunit"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sender\\": "src/"
+        },
+        "files": [
+            "src/index.php"
+        ]
+    },
+    "require": {
+        "vlucas/phpdotenv": "^3.6",
+        "monolog/monolog": "^2.0"
+    },
+    "require-dev": {
+      "squizlabs/php_codesniffer": "^3.4",
+      "phpunit/phpunit": "^8"
+    }
+  }
