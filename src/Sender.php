@@ -59,7 +59,7 @@ class Sender
         }
         $packWithDriverMessageParams = [];
         foreach ($pack as $message) {
-            $changeKeys[] = $this->changeMessageKeys($message);
+            $packWithDriverMessageParams[] = $this->changeMessageKeys($message);
         }
         return $packWithDriverMessageParams;
     }
